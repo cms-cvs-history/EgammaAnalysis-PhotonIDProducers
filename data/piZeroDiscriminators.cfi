@@ -1,4 +1,4 @@
-# $Id: piZeroDiscriminators.cfi,v 1.6 2007/10/18 13:50:23 akyriaki Exp $
+# $Id: piZeroDiscriminators.cfi,v 1.1 2007/12/07 15:12:25 futyand Exp $
 # Preshower cluster producer
 module piZeroDiscriminators = PiZeroDiscriminatorProducer
 {
@@ -13,10 +13,9 @@ module piZeroDiscriminators = PiZeroDiscriminatorProducer
     string Pi0Association = "PhotonPi0DiscriminatorAssociationMap"
 
     string barrelClusterShapeMapProducer  = "hybridSuperClusters"
-    string barrelClusterShapeMapCollection = "hybridShapeAssoc"
 
-    string endcapClusterShapeMapProducer  = "islandBasicClusters"
-    string endcapClusterShapeMapCollection = "islandEndcapShapeAssoc"
+    InputTag barrelRecHitCollection = "reducedRecHitEB"
+    InputTag endcapRecHitCollection = "reducedRecHitEE"
 
     double preshStripEnergyCut  = 0.0
     int32  preshPi0Nstrip  = 5
